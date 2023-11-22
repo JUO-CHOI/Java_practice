@@ -1,4 +1,4 @@
-// Q. 두개의 숫자를 입력받고, 순서를 바꿔서 출력하시오.
+package d1prob;// Q. 두개의 숫자를 입력받고, 순서를 바꿔서 출력하시오.
 
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package d1prob;
+
 public class q3 {
     public static void main(String[] args) {
 
