@@ -7,7 +7,7 @@ public class D2Operator {
         System.out.println(dataLost);
 
         // 삼항 연산자
-        int temperature = 37;
+        int temperature = 39;
         String message = temperature < 38 ? "OK" : "Feverish";
         System.out.println(message);
     }
