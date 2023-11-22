@@ -123,6 +123,6 @@ public class D1VarAndTypes {
 //        scores = new int[3];
 
         System.out.println(String.format("%.2f",0.123456789));
-        
+
     }
 }
