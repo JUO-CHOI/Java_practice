@@ -12,14 +12,14 @@ public class BankAccount {
 
     // 생성자 메소드
     public BankAccount(String accountNum, String password) {
-        if (accountNum.length() == 8 && password.length() == 4) {
+        if (accountNum.length() != 8 || password.length() != 4) {
+            System.out.println("오류");
+        }
+        else {
             this.accountNum = accountNum;
             this.password = password;
             totalAccount++;
             this.money = 0;
-        }
-        else {
-            System.out.println("오류");
         }
     }
 

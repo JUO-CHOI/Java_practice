@@ -1,12 +1,13 @@
 package d5prob;
 
 public class Person {
-    private String name;
+    private final String name;
     private int age;
 
     // 생성자 메소드 : 클래스와 이름이 동일, 인자로 이름 받음
     public Person(String name) {
         this.age = 0; // 나이 0 으로 초기화
+        this.name = name;
     }
 
     public void sayHello() {
@@ -19,7 +20,7 @@ public class Person {
     }
 
     public int age() {
-        this.age += 1;
+        this.age++;
         return this.age;
     }
 
