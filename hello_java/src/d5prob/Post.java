@@ -7,14 +7,14 @@ public class Post {
     // 객체 속성값
     private String title;
     private String content;
-    private LocalTime writeTime;
+    private final LocalTime writeTime;
     private LocalTime editTime;
     private String password;
 
     // 생성자
     public Post(String title, String content, String password) {
         this.writeTime = LocalTime.now();
-        this.editTime = LocalTime.now();
+        this.editTime = this.writeTime;
         this.title = title;
         this.content = content;
         this.password = password;
