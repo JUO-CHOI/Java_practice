@@ -24,7 +24,7 @@ public class q6 {
         else if (dustLevel <= 30) {
             return "좋음";
         }
-        else if (dustLevel <= 80) {
+        else if (dustLevel <= 80) {  // 위에서 커버가 되니 본인 범위만 적어준다
             return "보통";
         }
         else if (dustLevel <= 150) {

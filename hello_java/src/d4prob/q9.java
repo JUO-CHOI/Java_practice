@@ -18,41 +18,45 @@ public class q9 {
     }
 
     public static int maxWhere(int[] nums) {
-        int max = Integer.MIN_VALUE;
-        int count = 0;
+        int max = Integer.MIN_VALUE; // 초기 비교 대상, 그냥 첫번째 숫자 넣어줘도 됨 nums[0];
+        int index = 0; // 위치
         for (int i = 0; i < nums.length; i++) {
+            // 더 큰 숫자 발견, 인덱스 저장
             if (nums[i] > max) {
                 max = nums[i];
-                count = i;
+                index = i;
             }
         }
-        return count;
+        // for문이 끝나면 index에 최댓값 위치 저장
+        return index;
     }
     public static int minWhere (int[] nums) {
         int min = Integer.MAX_VALUE;
-        int count = 0;
+        int index = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < min) {
                 min = nums[i];
-                count = i;
+                index = i;
             }
         }
-        return count;
+        return index;
     }
 
     public static int maxDiff(int[] nums) {
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > max) {
-                max = nums[i];
-            }
-        }
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] < min) {
-                min = nums[i];
-            }
-        }
-        return max - min;
+//        int max = Integer.MIN_VALUE;
+//        int min = Integer.MAX_VALUE;
+//        for (int i = 0; i < nums.length; i++) {
+//            if (nums[i] > max) {
+//                max = nums[i];
+//            }
+//        }
+//        for (int i = 0; i < nums.length; i++) {
+//            if (nums[i] < min) {
+//                min = nums[i];
+//            }
+//        }
+//        return max - min;
+        // 위 메소드를 호출하자!!
+        return nums[maxWhere(nums)] - nums[minWhere(nums)]; // 각각 for 한번씩
     }
 }
