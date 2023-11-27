@@ -11,9 +11,11 @@ public class q9 {
         String[] name = new String[3];
         int[] temperature = new int[3];
 
+        // 먼저 3번의 이름을 입력받는다.
         for (int i = 0; i < 3; i++) {
             name[i] = scanner.nextLine();
         }
+        // 3번의 체온을 입력받는다.
         for (int i = 0; i < 3; i++) {
             temperature[i] = scanner.nextInt();
             scanner.nextLine();

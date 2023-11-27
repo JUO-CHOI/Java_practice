@@ -13,13 +13,16 @@ public class q7 {
 
         int remainGame = scanner.nextInt(); // 남은 게임
         scanner.nextLine();
+        int current = scanner.nextInt();
+        scanner.nextLine();
         int forwardPoint = scanner.nextInt(); // 목표 승점
         scanner.nextLine();
 
-        int win = forwardPoint / 3;
-        int draw = forwardPoint % 3;
+        int shouldWin = forwardPoint - current;
+        int win = shouldWin / 3;
+        int draw = shouldWin % 3;
 
-        if (remainGame * 3 <= forwardPoint) { // 다 이겨도 목표승점이 안될 때
+        if (remainGame * 3 < shouldWin) { // 다 이겨도 목표승점이 안될 때
             System.out.println(String.format("최고승점 : %d", remainGame * 3));
         }
         else if (win + draw > remainGame) {

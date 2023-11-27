@@ -9,6 +9,8 @@ public class q11 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        String[] day = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"}; // 요일 표시, date 코드를 실제요일로 바꿔줌.
+
         int date = scanner.nextInt();
         scanner.nextLine();
         boolean leapYear = scanner.nextBoolean();
@@ -19,27 +21,29 @@ public class q11 {
 
         if (leapYear) {
             for (int month = 1; month <= 12; month++){
-                if (month % 2 == 0) { // 짝수
+                // 짝수
+                if (month % 2 == 0) {
                     if (month == 8 || month == 10){ // 8월과 10월은 31일까지, 12월은 고려할 필요 없음
-                        System.out.println(String.format("%d월 : %d", month, date));
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 31) % 7;
                     }
                     else if (month == 2) { // 윤년 2월은 29일까지
-                        System.out.println(String.format("%d월 : %d", month, date));
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 29) % 7;
                     }
                     else { // 남은 짝수월은 30일까지
-                        System.out.println(String.format("%d월 : %d", month, date));
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 30) % 7;
                     }
                 }
-                else { // 홀수
+                // 홀수
+                else {
                     if (month == 9 || month == 11) { // 9월과 11월은 30일까지
-                        System.out.println(String.format("%d월 : %d", month, date));
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 30) % 7;
                     }
                     else { // 남은 홀수월은 31일까지
-                        System.out.println(String.format("%d월 : %d", month, date));
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 31) % 7;
                     }
                 }
@@ -47,27 +51,29 @@ public class q11 {
         }
         else {
             for (int month = 1; month <= 12; month++){
-                if (month % 2 == 0) { // 짝수
-                    if (month == 10 || month == 8){
-                        System.out.println(String.format("%d월 : %d", month, date));
+                // 짝수
+                if (month % 2 == 0) {
+                    if (month == 10 || month == 8){ // 8월과 10월은 31일까지, 12월은 고려할 필요 없음
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 31) % 7;
                     }
-                    else if (month == 2) {
-                        System.out.println(String.format("%d월 : %d", month, date));
+                    else if (month == 2) { // 윤년이 아니므로 2월은 28일
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 28) % 7;
                     }
-                    else {
-                        System.out.println(String.format("%d월 : %d", month, date));
+                    else { // 남은 짝수월은 30일까지
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 30) % 7;
                     }
                 }
-                else { // 홀수
-                    if (month == 9 || month == 11) {
-                        System.out.println(String.format("%d월 : %d", month, date));
+                // 홀수
+                else {
+                    if (month == 9 || month == 11) { // 9월과 11월은 30일까지
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 30) % 7;
                     }
-                    else {
-                        System.out.println(String.format("%d월 : %d", month, date));
+                    else { // 남은 홀수월은 31일까지
+                        System.out.println(month + "월 : " + day[date]);
                         date = (date + 31) % 7;
                     }
                 }
