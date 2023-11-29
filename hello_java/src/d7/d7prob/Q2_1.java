@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Q3_1 {
+public class Q2_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
